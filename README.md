@@ -1,5 +1,5 @@
 # Resources
-Estudos: Java Script - Angular JS - React - React Native
+Studies: Java Script - Angular JS - React - React Native
 
 
 1) Javascript
