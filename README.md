@@ -1,6 +1,9 @@
 # Resources
 Studies: Java Script - Angular JS - React - React Native
 
+Free 10 Days:
+https://www.pluralsight.com/
+
 
 1) Javascript
 References: <br/>
