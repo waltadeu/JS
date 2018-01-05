@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-innerHTML</title>
+</head>
+
+<body>
+  //elemento que receberá o conteúdo HTML
+	<p class="product-short-description"></p>
+
+    <script>
+    //função de início
+    function init() {
+    
+        //variável HTML
+        var multiplus = '<p style="padding: 10px;border: 1px solid #666;margin: 20px 0px;text-transform: uppercase;letter-spacing: normal;line-height: normal;font-size: 11px;font-weight: bold;font-family: verdana;color: #666;">"O acúmulo de pontos múlltiplus na Droga Raia não está mais disponível desde 01/01/2018.<br>Os pontos acumulados até esta data serão válidos normalmente conforme as regras da Multiplus.<br>Para obter mais informações sobre trocas, recuperação ou validade dos pontos consulte:  https://www.pontosmultiplus.com.br."</p>';
+        
+        //pega o seletor <p class="product-short-description"> e insere o conteúdo HTML
+        //o seletor é uma class, por isso é preciso passar o nó [0] caso haja mais elementos com a mesma class
+        document.getElementsByClassName("product-short-description")[0].innerHTML = multiplus;
+        
+    	console.log(multiplus);
+    }
+    //inicia a function init();
+    init();
+    </script>
+</body>
+
+</html>
