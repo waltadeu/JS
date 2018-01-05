@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Dados Usuário:</h2>
+    <p id="nome"></p>
+    <p id="idade"></p>
+
+    <script>
+    
+    //cria o array de usuários
+    var text = '{"usuarios":[' +
+        '{"nomeUsuario":"Walter","idadeUsuario":"30" },' +
+        '{"nomeUsuario":"Daniel","idadeUsuario":"29" }]}';
+    
+    //define que o aray JSON será tipo "text"
+    obj = JSON.parse(text);
+    
+    //pego os seletores "nome" e "idade" e insiro o nó [1]
+    document.getElementById("nome").innerHTML = 'Nome: ' + obj.usuarios[1].nomeUsuario;
+    document.getElementById("idade").innerHTML = 'Idade: ' + obj.usuarios[1].idadeUsuario;
+
+    </script>
+</body>
+
