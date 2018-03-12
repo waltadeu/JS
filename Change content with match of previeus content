@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-DeletePatialString</title>
+</head>
+
+<body>
+  
+	<p class="info" >Brasil amarela de portas abertas.</p>
+    
+   //elemento mudará o conteúdo somente se o conteudo for igual a "Brasil amarela de portas abertas mode de que minha gente.". 
+  <p class="info" >Brasil amarela de portas abertas mode de que minha gente.</p>
+
+    <script>
+    
+        //variável 
+        //o seletor é uma class, por isso é preciso passar o nó da sua posição :eq(1) caso haja mais elementos com a mesma class
+        var contentinfo = $('.info:eq(1)').html();
+        //variável que trocara o conteúdo do html do "p.info".
+        var trocarconteudo = '<p class="info"><strong>Eu mudei <span style="color:blue;">muleke monstro!!!!!</span><strong></p>'
+
+//Inicia a função
+$(function(){
+  //Dizemos que SE a variavel contentinfo for identica a "Brasil amarela de portas abertas mode de que minha gente."
+	if (contentinfo == 'Brasil amarela de portas abertas mode de que minha gente.'){
+    //Mudamos o conteudo para o conteudo da variavel "trocarconteudo"
+		$('.info:eq(1)').html(trocarconteudo);	
+}});
+     
+    </script>
+    
+    
+</body>
+
+</html>
