@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Your Website</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li>Your menu</li>
+            </ul>
+         </nav>
+      </header>
+      <section>
+         <form id="myForm" name="myForm">
+            <div>
+               <label for="username">Enter name:</label>
+               <input type="text" id="username" name="username">
+            </div>
+            <div>
+               <label for="useracc">Enter account number:</label>
+               <input type="text" id="useracc" name="useracc">
+            </div>
+            <div>
+               <label for="userfile">Upload file:</label>
+               <!-- Sempre limpar com javascript caso os valores estejam vazio para não ter problema com o ios. -->
+               <input type="file" id="userfile" name="userfile">
+            </div>
+            <!-- Criar o submit como input, pois o button tem problema com o ios. -->
+            <input type="submit" value="Submit!">
+         </form>
+      </section>
+      <aside>
+         <h2>About section</h2>
+         <p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </aside>
+      <footer>
+         <p>Copyright 2009 Your name</p>
+      </footer>
+      <script>
+         var myForm = document.getElementById('myForm');
+         // Get 
+         formData = new FormData(myForm);
+         
+          $.ajax({
+                     url: form.action,
+                     type: 'POST',
+                     data: formData,
+                     contentType: true,
+                     processData: true,
+                     success: function () {
+                        //add the function to send of mensage.
+                     },
+                     error: function () {
+                       //add the function to send of mensage.
+         
+                     }
+                 });
+         
+      </script>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-DeletePatialString</title>
+</head>
+
+<body>
+  
+	<p class="info" >Brasil amarela de portas abertas.</p>
+    
+   //elemento que receberá o replace
+  <p class="info" >Brasil amarela de portas abertas mode de que minha gente.</p>
+
+    <script>
+    //função de início
+    function init() {
+    
+        //variável 
+        //o seletor é uma class, por isso é preciso passar o nó da sua posição :eq(1) caso haja mais elementos com a mesma class
+        // selecionamo .html() para que o texto não perca as propriedades css existentes. 
+         var retirartexto = $(".info:eq(1)").html();
+         var colarvazio = retirartexto.replace("abertas", "");
+      
+      //inicia o replace
+      $(".info:eq(1)").html(colarvazio);
+     
+    </script>
+    
+    
+</body>
+
+</html>

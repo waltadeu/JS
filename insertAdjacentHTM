@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-DeletePatialString</title>
+</head>
+
+<body>
+   // Contéudo aparecerá acima da primeira tag com a classe "info" 
+	<p class="info" >Brasil amarela de portas abertas.</p>
+    
+  
+  <p class="info" >Brasil amarela de portas abertas mode de que minha gente.</p>
+
+    <script>
+    
+//começa a função
+function addinformation() {
+   		//variável com o conteúdo html
+        var bocadagarrafa = '<p style="padding: 10px;border: 1px solid #666;margin: 20px 0px;letter-spacing: normal;line-height: normal;font-size: 11px;font-weight: bold;font-family: verdana;color: #666;">vai descendo na boquinha da garrafa... É na boca da garrafa... desce mais.. desce mais um pouquinho... desce mais desce devagarinho</p>';
+        // Seleciono a classe "info" e condiciona a primeira tag com a class info pelo nó [0]. Estou utilizando o insertAdjacentHTML para adicionar conteúdo depois que a tag de info terminar.
+        document.getElementsByClassName("info")[0].insertAdjacentHTML('afterend', bocadagarrafa);
+  		
+    }
+
+    addinformation();
+    </script>
+    
+    
+</body>
+
+</html>
