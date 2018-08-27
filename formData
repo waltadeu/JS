@@ -43,6 +43,14 @@
          // Get 
          formData = new FormData(myForm);
          
+         // is necessary clean of the input file when we use formData, because there a bug in ios.
+         $('input[type=file]',form).each(function() {
+               var archivo= $(this).prop('userfile');
+               if ( archivo != undefined && files.length <= 0 ) {
+                   formData.delete($(this).attr('name'));              
+               }
+           });
+         
           $.ajax({
                      url: form.action,
                      type: 'POST',
